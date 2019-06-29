@@ -70,13 +70,6 @@ label.link {
   padding: 20px;
   font-family: 'arial unicode ms';
 }
-.modal .modal-check:checked + .modal-body {
-  animation: fadeout 0.2s 1 forwards, hide 0.1s 0.2s 1 forwards;
-}
-.modal .modal-check:checked + .modal-body .modal-window {
-  animation: zoomout 0.2s 1 forwards;
-}
-
 
 .site-description{
   background-color: white;

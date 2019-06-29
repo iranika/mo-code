@@ -43,7 +43,7 @@ const viewer = (()=>{
       })
     },
     createMenuItem : (index, item)=>{
-      return `<a href="#" class="w3-bar-item w3-button" onclick="viewer.initShowImage(${index})">${index +1}. ${item.Title}</a>`
+      return `<a href="#${index +1}" class="w3-bar-item w3-button" onclick="viewer.initShowImage(${index})">${index +1}. ${item.Title}</a>`
     },
     showMore : ()=>{
       if (viewer.page.length >= viewer.page.current){
@@ -87,7 +87,8 @@ const viewer = (()=>{
 })();
 
 window.onload = ()=>{
-  hash = location.hash.replace("#", "")
+  hash = location.hash.replace("#", "").replace("latest", pageData.length)
+
   if (isNaN(hash) || hash == ""){
     document.getElementById("modal").style.display = "block"　//モーダルの表示
     viewer.initShowImage(viewer.page.current)
@@ -105,4 +106,3 @@ window.onload = ()=>{
     }
   })
 }
-

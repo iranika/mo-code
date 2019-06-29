@@ -17,10 +17,9 @@
 </head>
 <body id="body">
   <div class="modal" id="modal" style="display: none">
-    <input class="modal-check" type="checkbox" id="modal-check">
     <div class="modal-body">
       <div class="modal-window">
-        <label class="modal-label" for="modal-check" style="right:-16">
+        <label class="modal-label" style="right:-16" onclick="document.getElementById('modal').style.display='none'">
           <svg width="16" height="16">
             <polygon points="14.4,3.1 12.9,1.6 8,6.6 3.1,1.6 1.6,3.1 6.6,8 1.6,12.9 3.1,14.4 8,9.4 12.9,14.4 14.4,12.9 9.4,8 "></polygon>
           </svg>
@@ -37,8 +36,8 @@
               Chrome推奨です(他のブラウザは動作保証しません)<br>
             </div>
             <div class="site-infomation">
-              <label for="modal-check">
-                <a class="site-infomation-textlink">最初から読む</a>
+              <label onclick="document.getElementById('modal').style.display='none'">
+                <a class="site-infomation-textlink" >最初から読む</a>
                 <a class="site-infomation-textlink" onclick="viewer.lastShowImage()">新作から読む</a>
               </label>
             </div>

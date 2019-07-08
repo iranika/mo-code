@@ -11,7 +11,6 @@
   <link rel="icon" href="./img/favicon.png" sizes="48x48">
   <link rel="stylesheet" href="./css/w3.css">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/modal.css">
   <script src="./4komaData.js"></script>
   <title>みちくさびゅあー</title>
 </head>
@@ -87,6 +86,153 @@
         </div>
       </div>
     </div>
+    <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue";
+    }
+      
+    .dummy {
+      width: 90vw;
+      margin: 20px auto;
+    }
+
+    label.link {
+      cursor: pointer;
+      color: #04c;
+      text-decoration: underline;
+    }
+
+    .modal .modal-check {
+      display: none;
+    }
+    .modal .modal-body {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 100000;
+    }
+    .modal .modal-window {
+      position: relative;
+      z-index: 100001;
+      animation: fadein 0.3s 1, zoomin 0.3s 1;
+    }
+    .modal .modal-label {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      background: #099;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .modal .modal-label:hover {
+      background: #00cccc;
+    }
+    .modal .modal-label:active {
+      background: aqua;
+    }
+    .modal .modal-label svg {
+      display: flex;
+      align-items: center;
+      fill: #fff;
+    }
+    .modal .modal-inner {
+      width: 90vw;
+      max-width: 800px;
+      background: #fff;
+      border-radius: 3px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    .modal .modal-content {
+      padding: 20px;
+      font-family: 'arial unicode ms';
+    }
+
+    .site-description{
+      background-color: white;
+      font-size: 98%;
+    }
+
+    .site-caption{
+      padding-top: 30px;
+      background-color: white;
+      font-size: 98%;
+    }
+
+    .site-infomation{
+      padding-top: 30px;
+    }
+    .site-infomation-textlink{
+      background: #EEEEEE;
+      box-shadow: 3px 3px rgba(0,0,0,0.2);
+      color: #333;
+      flex: none;
+      font-family: Lato;
+      font-size: 120%;
+      font-weight: 400;
+      height: 58px;
+      text-align: center;
+      margin-right: 10px;
+      margin-left: 10px;
+      padding: 10px;
+      width: 148px;
+      max-width: 100%;
+      justify-content: center;
+    }
+
+    @keyframes fadein {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeout {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes zoomin {
+      0% {
+        transform: scale(0.9);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes zoomout {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0.9);
+      }
+    }
+    @keyframes hide {
+      0% {
+        visibility: visible;
+      }
+      100% {
+        visibility: hidden;
+      }
+    }
+    </style>
     <script src="./js/michikusa-viewer.js"></script>
 </body>
 </html>

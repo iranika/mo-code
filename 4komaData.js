@@ -217,5 +217,5 @@ pageData = [
 ,{"Title": "隣の芝", "ImagesUrl": ["https://mo-code.iranika.info/4koma/216-1.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ,{"Title": "手打ちうどん体験", "ImagesUrl": ["https://mo-code.iranika.info/4koma/217-1.jpg", "https://mo-code.iranika.info/4koma/217-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ,{"Title": "けむし", "ImagesUrl": ["https://mo-code.iranika.info/4koma/218-1.jpg", "https://mo-code.iranika.info/4koma/218-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
-,{"Title": "つば吉", "ImagesUrl": ["https://mo-code.iranika.info/4koma/219-1.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
+,{"Title": "つば吉", "ImagesUrl": ["https://mo-code.iranika.info/4koma/219-1.jpg", "https://mo-code.iranika.info/4koma/219-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ]

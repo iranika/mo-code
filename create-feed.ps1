@@ -7,7 +7,7 @@ $title = (date +%Y%m%d%H%M)
 $update = (date +%Y-%m-%dT%T%:z)
 $content = (Get-Content -Raw ./4komaData.json | ConvertFrom-Json).Title[-1]
 $auther = "iranika"
-$entry_url = "https://mo-code.iranika.info/#latest"
+$entry_url = "https://iranika.github.io/mo-code/#latest"
 
 $new_entry = @"
 <!--insertEntry-->
@@ -16,7 +16,7 @@ $new_entry = @"
   <updated>$($update)</updated>
   <link rel="alternate" type="text/html" href="$($entry_url)"/>
   <title>$($title)</title>
-  <content type="html">&lt;p&gt;$($content)&lt;/p&gt;</content>
+  <content type="html">$($content)</content>
   <author>
     <name>$($auther)</name>
   </author>

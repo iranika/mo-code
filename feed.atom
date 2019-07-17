@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="ja-JP">
+  <id>tag:iranika.github.io,2019:https://mo-code.iranika.info/</id>
+  <link type="text/html" rel="alternate" href="https://mo-code.iranika.info/" />
+  <link type="application/atom+xml" rel="self" href="https://mo-code.iranika.info/feed.atom" />
+  <title>みちくさびゅあー</title>
+  <updated>2019-07-17T23:21:55+09:00</updated>
+  <!--insertEntry-->
+  <entry>
+    <id>tag:iranika.github.io,2019:Repository/194400309/201907172321</id>
+    <updated>2019-07-17T23:21:55+09:00</updated>
+    <link rel="alternate" type="text/html" href="https://mo-code.iranika.info/#latest" />
+    <title>201907172321</title>
+    <content type="html">&lt;p&gt;つば吉&lt;/p&gt;</content>
+    <author>
+      <name>iranika</name>
+    </author>
+  </entry>
+</feed>

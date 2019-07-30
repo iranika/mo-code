@@ -16,77 +16,16 @@
   <title>みちくさびゅあー</title>
 </head>
 <body id="body">
-  <div class="modal" id="modal" style="display: none">
-    <div class="modal-body">
-      <div class="modal-window">
-        <label class="modal-label" style="right:-16" onclick="document.getElementById('modal').style.display='none'">
-          <svg width="16" height="16">
-            <polygon points="14.4,3.1 12.9,1.6 8,6.6 3.1,1.6 1.6,3.1 6.6,8 1.6,12.9 3.1,14.4 8,9.4 12.9,14.4 14.4,12.9 9.4,8 "></polygon>
-          </svg>
-        </label>
-        <div class="modal-inner">
-          <div class="modal-content">
-            <h2>みちくさびゅあー</h2>
-            <div class="site-description">
-              これは道草屋の漫画ビュアーです。<br>
-              スクロールすると次のページが自動で読み込まれます。<br>
-              自動で読み込まれない際は下部の続きを表示を押下してください。<br>
-              右上のメニューから好きな話数にジャンプ出来ます。<br>
-              スマホの場合は画面を横にすると見やすい気がします。<br>
-              Chrome推奨です(他のブラウザは動作保証しません)<br>
-            </div>
-            <div class="site-infomation">
-              <label onclick="document.getElementById('modal').style.display='none'">
-                <a class="site-infomation-textlink" >最初から読む</a>
-                <a class="site-infomation-textlink" onclick="viewer.lastShowImage()">新作から読む</a>
-              </label>
-            </div>
-            <div class="site-caption">
-              注意<br>
-              画像(漫画)は<a href="http://momoirocode.web.fc2.com/">桃色CODE様</a>の著作物です。<br>
-              画像の著作権は桃色CODE様にあり、iranikaにはありません。<br>
-              iranikaは桃色CODE様から許諾を頂いて画像及びビュアーを提供しています。<br>
-              ビュアーの不具合のお問い合わせは<a href="https://twitter.com/happy_packet">いらにか(twitter)</a>までお願いします。<br>
-              桃色CODE様には問い合わせないでください。<br>
-              Twitter:<a href="https://twitter.com/happy_packet">@happy_packet</a><br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
-    <button onclick="viewer.closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
-  </div>
-  <button class="w3-button w3-teal w3-xxxlarge w3-right dock-button" onclick="viewer.openRightMenu()">&#9776;</button>
-  <div id="view"></div>
-  <div id="footer">
-    <a id="more" onclick="viewer.showMore()"><button type="button">続きを表示</button></a>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  </div>
-  <div id="about">
-    <div class="footer-promotion">
-      道草屋についてもっと知りたくなった人は、<br>
-      サークルサイト「<a href="http://momoirocode.web.fc2.com/">桃色CODE</a>」をチェック♪<br>
-      もしくは<a href="https://www.dlsite.com/home/circle/profile/=/maker_id/RG24350.html">DLSite</a>/<a href="https://momotori.booth.pm/">Booth</a>のサークルページへGo!!<br>
-      (DLSiteとBoothはR指定があるので未成年の方は注意)<br>
-      <div>
-        <div class="footer-note">
-          みちくさびゅあーは道草屋の著作者である桃鳥様から<br>
-          許諾を得てiranikaがを提供・公開しています。<br>
-          <div>
-            <a class="footer-note-links" href="https://github.com/iranika/mo-code">Github</a>
-            <a class="footer-note-links" href="https://twitter.com/happy_packet">Twitter</a>
-          </div>
-          みちくさびゅーあー ©2019 iranika(@happy_packet)
-        </div>
-      </div>
-    </div>
-    <script src="./js/michikusa-viewer.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js"></script>
+    <script type="text/babel">
+    ReactDOM.render(
+      <h1>Hello world!</h1>,
+      document.getElementById('root')
+    );
+    </script>
+    </body>
 </html>

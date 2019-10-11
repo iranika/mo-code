@@ -223,4 +223,5 @@ pageData = [
 ,{"Title": "洋画", "ImagesUrl": ["https://mo-code.iranika.info/4koma/222-1.jpg", "https://mo-code.iranika.info/4koma/222-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ,{"Title": "稲刈り", "ImagesUrl": ["https://mo-code.iranika.info/4koma/223-1.jpg", "https://mo-code.iranika.info/4koma/223-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ,{"Title": "稲穂", "ImagesUrl": ["https://mo-code.iranika.info/4koma/224-1.jpg", "https://mo-code.iranika.info/4koma/224-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
+,{"Title": "秘訣", "ImagesUrl": ["https://mo-code.iranika.info/4koma/225-1.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ]

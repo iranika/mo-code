@@ -226,5 +226,5 @@ pageData = [
 ,{"Title": "秘訣", "ImagesUrl": ["https://mo-code.iranika.info/4koma/225-1.jpg", "https://mo-code.iranika.info/4koma/225-2.jpg", "https://mo-code.iranika.info/4koma/225-3.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ,{"Title": "吸血鬼", "ImagesUrl": ["https://mo-code.iranika.info/4koma/226-1.jpg", "https://mo-code.iranika.info/4koma/226-2.jpg", "https://mo-code.iranika.info/4koma/226-3.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ,{"Title": "無駄遣い", "ImagesUrl": ["https://mo-code.iranika.info/4koma/227-1.jpg", "https://mo-code.iranika.info/4koma/227-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
-,{"Title": "影響", "ImagesUrl": ["https://mo-code.iranika.info/4koma/228-1.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
+,{"Title": "影響", "ImagesUrl": ["https://mo-code.iranika.info/4koma/228-1.jpg", "https://mo-code.iranika.info/4koma/228-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ]

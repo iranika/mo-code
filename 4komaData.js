@@ -228,5 +228,5 @@ pageData = [
 ,{"Title": "無駄遣い", "ImagesUrl": ["https://mo-code.iranika.info/4koma/227-1.jpg", "https://mo-code.iranika.info/4koma/227-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ,{"Title": "影響", "ImagesUrl": ["https://mo-code.iranika.info/4koma/228-1.jpg", "https://mo-code.iranika.info/4koma/228-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ,{"Title": "おようふく", "ImagesUrl": ["https://mo-code.iranika.info/4koma/229-1.jpg", "https://mo-code.iranika.info/4koma/229-2.jpg", "https://mo-code.iranika.info/4koma/229-3.jpg", "https://mo-code.iranika.info/4koma/229-4.jpg", "https://mo-code.iranika.info/4koma/229-5.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
-,{"Title": "おとしだま", "ImagesUrl": ["https://mo-code.iranika.info/4koma/230-1.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
+,{"Title": "おとしだま", "ImagesUrl": ["https://mo-code.iranika.info/4koma/230-1.jpg", "https://mo-code.iranika.info/4koma/230-2.jpg", "https://mo-code.iranika.info/4koma/sp.jpg"]}
 ]

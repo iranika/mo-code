@@ -4,8 +4,18 @@
   <link type="text/html" rel="alternate" href="https://iranika.github.io/mo-code/" />
   <link type="application/atom+xml" rel="self" href="https://iranika.github.io/mo-code/feed.atom" />
   <title>みちくさびゅあー</title>
-  <updated>2020-01-15T15:00:54+09:00</updated>
+  <updated>2020-01-18T04:00:53+09:00</updated>
   <!--insertEntry-->
+  <entry>
+    <id>tag:iranika.github.io,2019:Repository/194400309/202001180400</id>
+    <updated>2020-01-18T04:00:53+09:00</updated>
+    <link rel="alternate" type="text/html" href="https://iranika.github.io/mo-code/#latest" />
+    <title>202001180400</title>
+    <content type="html">おとしだま</content>
+    <author>
+      <name>iranika</name>
+    </author>
+  </entry>
   <entry>
     <id>tag:iranika.github.io,2019:Repository/194400309/202001151500</id>
     <updated>2020-01-15T15:00:54+09:00</updated>

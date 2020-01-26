@@ -1,1 +1,10 @@
 package-lock.json
+.ionide/symbolCache.db
+momoirocode.web.fc2.com/*
+mosq/update-info.dat
+mosq/src/mosqpkg/updateutils.nim
+mosq/tests/test1
+mosq/update-info.test.dat
+mosq/mosq
+mosq/tests/test1
+mosq/4koma/*

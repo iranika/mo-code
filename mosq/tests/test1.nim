@@ -7,16 +7,12 @@
 
 import unittest
 
-import mosqpkg/updateutils
+import mosqpkg/[updateutils, utils4koma]
 test "hasUpdated":
   let testUpdateInfoFile = "update-info.test.dat"
   writeFile(testUpdateInfoFile, "")
   doAssert updateutils.hasUpdated("http://momoirocode.web.fc2.com/mocode.html", testUpdateInfoFile) # "" != newHash, return true.
   doAssert not updateutils.hasUpdated("http://momoirocode.web.fc2.com/mocode.html", testUpdateInfoFile) # newHash = newHash, return false.
 
-test "update4koma":
-  var fp: File = open("4komaData.js", FileMode.fmWrite)
-  defer:
-    close(fp)
-
-  updateutils.get4komaUrl(fp, url="http://momoirocode.web.fc2.com")
+test "update4komaData":
+  utils4koma.update4komaData()

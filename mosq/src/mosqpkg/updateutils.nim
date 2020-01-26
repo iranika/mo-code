@@ -23,9 +23,4 @@ proc hasUpdated*(url: string, updateInfoFileName: string = "update-info.dat"): b
   else:
     return false
 
-proc download4komaImage*() =
-  return
-
-proc updateFeedAtom*() =
-  return
 

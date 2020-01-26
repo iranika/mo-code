@@ -1,13 +1,15 @@
-import parseopt
 import httpclient
-import marshal
 import htmlparser
 import streams
 import xmltree
-import strutils, pegs, unicode
+import pegs, unicode
 import os, times
 import uri
 import nimquery
+import json, marshal
+import nre,options,strutils
+import threadpool
+{.experimental: "parallel".}
 
 # use get4komaUrl
 type 
@@ -15,6 +17,7 @@ type
     Title: string
     ImagesUrl: seq[string]
 
+const file4komaData = "4komaData.js"
 #const sqAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.99 Safari/537.36"
 
 proc writeJson4komaData*[T](stream: T, url: string) =
@@ -25,8 +28,7 @@ proc writeJson4komaData*[T](stream: T, url: string) =
     domain.anchor = ""
   var client = newHttpClient()
   var res = client.get($(domain / "mocode.html"))
-  let doc = res.body.newStringStream().parseHtml()
-  let nodes = doc.querySelectorAll("li > a")
+  let nodes = res.body.newStringStream().parseHtml().querySelectorAll("li > a")
   var isFirstItem = true
 
   stream.write "pageData = [\n"
@@ -37,8 +39,7 @@ proc writeJson4komaData*[T](stream: T, url: string) =
     
     debugEcho $a.attr("href")
     res = client.get($(domain / a.attr("href")))
-    let doc = res.body.newStringStream().parseHtml()
-    let nodes = doc.querySelectorAll("img")
+    let nodes = res.body.newStringStream().parseHtml().querySelectorAll("img")
 
     for img in nodes:
       if (".jpg" in img.attr("src")) or (".png" in img.attr("src")):
@@ -53,8 +54,29 @@ proc writeJson4komaData*[T](stream: T, url: string) =
   stream.write "]"
 
 proc update4komaData*() =
-  var fp: File = open("4komaData.js", FileMode.fmWrite)
+  var fp: File = open(file4komaData, FileMode.fmWrite)
   defer:
     close(fp)
-
   writeJson4komaData(fp, url="http://momoirocode.web.fc2.com")
+  
+proc download4komaImage*() =
+  if not existsDir("4koma"):
+    createDir("4koma")
+  let json4komaNode = readFile(file4komaData).replace("pageData = ", "").parseJson
+  let json4koma = to(json4komaNode, seq[PageData])
+  for index,item in json4koma :
+    parallel:
+      for imgUrl in item.ImagesUrl:
+        let saveFilename = imgUrl.replace(re".*4koma","4koma") # save 4koma/filename
+        if existsFile(saveFilename):
+          if index + 1 != json4koma.len() : #skip other than last index.
+            debugEcho "skiped save: " & saveFilename
+            continue #skip download
+        var hc = newHttpClient()
+        spawn hc.downloadFile(imgUrl, saveFilename)
+        debugEcho "saved file: " & saveFilename
+
+
+
+proc updateFeedAtom*() =
+  return

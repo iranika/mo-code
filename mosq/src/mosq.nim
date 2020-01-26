@@ -9,7 +9,8 @@ when isMainModule:
   if hasUpdated(mocode_url):
     update4komaData()
     download4komaImage()
-    updateFeedAtom()    
+    updateFeedAtom()
+    replaceUrl4komaJs()
   else:
     echo "No updates. " & mocode_url
 

@@ -7,6 +7,8 @@ import os, times
 import uri
 import nimquery
 import json, marshal
+import strformat
+import times
 import nre,options,strutils
 import threadpool
 {.experimental: "parallel".}
@@ -76,4 +78,27 @@ proc download4komaImage*() =
         debugEcho "saved file: " & saveFilename
 
 proc updateFeedAtom*() =
+  let list4koma: seq[PageData] = readFile(file4komaData).replace("pageData = ", "").parseJson.to(seq[PageData])
+  let title = now().format("yyyyMMddHHmm")
+  let update = now().format("yyyy-MM-dd'T'HH':'mm':'sszzz")
+  let content = list4koma[list4koma.len - 1].Title
+  let auther = "iranika"
+  let entry_url = "https://iranika.github.io/mo-code/#latest"
+
+  let addFeedEntryStr = """<!--insertEntry-->
+  <entry>
+    <id>tag:iranika.github.io,2019:Repository/194400309/$title</id>
+    <updated>$update</updated>
+    <link rel="alternate" type="text/html" href="$entry_url"/>
+    <title>$title</title>
+    <content type="html">$content</content>
+    <author>
+      <name>$auther</name>
+    </author>
+  </entry>""" % ["title", title, "update", update, "content", content, "auther", auther, "entry_url", entry_url]
+  writeFile("feed.atom", readFile("feed.atom").replace("<!--insertEntry-->", addFeedEntryStr))
+  debugEcho addFeedEntryStr
+  return
+
+proc replaceUrl4komaJs*() =
   return

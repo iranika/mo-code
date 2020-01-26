@@ -6,7 +6,6 @@
 # To run these tests, simply execute `nimble test`.
 
 import unittest
-import asyncdispatch
 
 import mosqpkg/[updateutils, utils4koma]
 test "hasUpdated":
@@ -18,12 +17,11 @@ test "hasUpdated":
 #[
 test "update4komaData":
   utils4koma.update4komaData()
-#]#
 
 test "download4komaImage":
   utils4koma.download4komaImage()
-  
-#[
+#]#
+
 test "updateFeedAtom":
   updateFeedAtom()
-]#
+#]#

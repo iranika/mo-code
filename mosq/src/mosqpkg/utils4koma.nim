@@ -62,21 +62,18 @@ proc update4komaData*() =
 proc download4komaImage*() =
   if not existsDir("4koma"):
     createDir("4koma")
-  let json4komaNode = readFile(file4komaData).replace("pageData = ", "").parseJson
-  let json4koma = to(json4komaNode, seq[PageData])
-  for index,item in json4koma :
+  let jsonNode4koma = readFile(file4komaData).replace("pageData = ", "").parseJson
+  let list4koma: seq[PageData] = to(jsonNode4koma, seq[PageData])
+  for index,item in list4koma:
     parallel:
       for imgUrl in item.ImagesUrl:
         let saveFilename = imgUrl.replace(re".*4koma","4koma") # save 4koma/filename
-        if existsFile(saveFilename):
-          if index + 1 != json4koma.len() : #skip other than last index.
-            debugEcho "skiped save: " & saveFilename
-            continue #skip download
+        if existsFile(saveFilename) and index + 1 < list4koma.len : #skip other than last index.
+          debugEcho "skiped save: " & saveFilename
+          continue #skip download
         var hc = newHttpClient()
         spawn hc.downloadFile(imgUrl, saveFilename)
         debugEcho "saved file: " & saveFilename
-
-
 
 proc updateFeedAtom*() =
   return

@@ -19,7 +19,10 @@ type
     Title: string
     ImagesUrl: seq[string]
 
-const file4komaData = "4komaData.js"
+const file4komaData = "4komaData.js.org"
+const exportFile4komaData = "4komaData.js"
+const originalSite = "http://momoirocode.web.fc2.com"
+const provideSite = "https://iranika.github.io/mo-code/"
 #const sqAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.99 Safari/537.36"
 
 proc writeJson4komaData*[T](stream: T, url: string) =
@@ -59,7 +62,7 @@ proc update4komaData*() =
   var fp: File = open(file4komaData, FileMode.fmWrite)
   defer:
     close(fp)
-  writeJson4komaData(fp, url="http://momoirocode.web.fc2.com")
+  writeJson4komaData(fp, url=originalSite)
   
 proc download4komaImage*() =
   if not existsDir("4koma"):
@@ -101,4 +104,5 @@ proc updateFeedAtom*() =
   return
 
 proc replaceUrl4komaJs*() =
+  writeFile(exportFile4komaData, readFile(file4komaData).replace(originalSite, provideSite))
   return

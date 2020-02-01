@@ -28,8 +28,6 @@ jobs:
         curl https://nim-lang.org/choosenim/init.sh -sSf > init.sh
         sh init.sh -y
         export PATH=$HOME/.nimble/bin:$PATH
-        cd mosq && nimble build -d:release
-        cd ..
     - uses: actions/checkout@v2
     - name: initialize git setting.
       run: |
@@ -40,7 +38,11 @@ jobs:
         git checkout refactor/selfhost
     - name: check update momoirocode 
       run: |
+        cd mosq
+        nimble build -d:release
+        cd ..
         ./mosq/bin/mosq
+        git add 4koma/*
         git add ./4komaData.js
         git add ./feed.atom
         git commit -m "update: auto updated 4komaData by yurika" && git push origin refactor/selfhost

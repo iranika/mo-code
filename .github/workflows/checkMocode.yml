@@ -27,8 +27,8 @@ jobs:
         export CHOOSENIM_CHOOSE_VERSION="1.0.4"
         curl https://nim-lang.org/choosenim/init.sh -sSf > init.sh
         sh init.sh -y
-    - uses: actions/checkout@v2
     - name: initialize git setting.
+      uses: actions/checkout@v2
       run: |
         git config --global user.name "iranika"
         git config --global user.email "7370486+iranika@users.noreply.github.com"
@@ -36,12 +36,13 @@ jobs:
         git fetch
         git checkout refactor/selfhost
     - name: check update momoirocode 
+      uses: actions/checkout@v2
       run: |
         export PATH=$HOME/.nimble/bin:$PATH
         cd mosq
         nimble build -y -d:release
         cd ..
         ./mosq/bin/mosq | grep -v "No updates" && \
-        (git add 4koma/* 4komaData.js feed.atom update-info.dat && \
+        (git add 4koma/* 4komaData.js 4komaData.js.org feed.atom update-info.dat && \
         git commit -m "update: auto updated 4komaData by yurika" && \
         git push origin refactor/selfhost) || echo "No updates."

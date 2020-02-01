@@ -28,7 +28,9 @@ jobs:
         curl https://nim-lang.org/choosenim/init.sh -sSf > init.sh
         sh init.sh -y
         export PATH=$HOME/.nimble/bin:$PATH
-        cd mosq && nimble build -d:release
+        ls -al
+        cd mosq
+        nimble build -d:release
     - uses: actions/checkout@v2
     - name: initialize git setting.
       run: |

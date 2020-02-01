@@ -29,7 +29,8 @@ jobs:
         sh init.sh -y
         export PATH=$HOME/.nimble/bin:$PATH
         ls -al
-        cd mosq
+        pwd
+        cd mo-code/mosq
         nimble build -d:release
     - uses: actions/checkout@v2
     - name: initialize git setting.

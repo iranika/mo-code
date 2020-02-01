@@ -3,9 +3,8 @@ name: Update check
 on:
   schedule:
     - cron: '*/20 * * * *'
-  #push:
-  #  branches: 
-  #    - refactor/selfhost
+    branches: 
+      - refactor/selfhost
 
 jobs:
   build:

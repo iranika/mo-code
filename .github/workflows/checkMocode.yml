@@ -27,11 +27,6 @@ jobs:
         export CHOOSENIM_CHOOSE_VERSION="1.0.4"
         curl https://nim-lang.org/choosenim/init.sh -sSf > init.sh
         sh init.sh -y
-        export PATH=$HOME/.nimble/bin:$PATH
-        ls -al
-        pwd
-        cd mo-code/mosq
-        nimble build -d:release
     - uses: actions/checkout@v2
     - name: initialize git setting.
       run: |
@@ -42,6 +37,8 @@ jobs:
         git checkout refactor/selfhost
     - name: check update momoirocode 
       run: |
+        export PATH=$HOME/.nimble/bin:$PATH
+        nimble build -d:release
         ./mosq/bin/mosq
         git add ./4komaData.js
         git add ./feed.atom

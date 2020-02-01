@@ -2,7 +2,7 @@ name: Update check
 
 on:
   schedule:
-    - cron:  '00 0-23/1 * * *'
+    - cron: '00 0-23/1 * * *'
   #push:
   #  branches: 
   #    - refactor/selfhost

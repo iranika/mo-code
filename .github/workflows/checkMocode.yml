@@ -39,7 +39,7 @@ jobs:
       run: |
         export PATH=$HOME/.nimble/bin:$PATH
         cd mosq
-        nimble build -d:release
+        nimble build -y -d:release
         cd ..
         ./mosq/bin/mosq
         git add 4koma/*

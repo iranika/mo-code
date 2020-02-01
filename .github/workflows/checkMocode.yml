@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - refactor/selfhost
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: check update momoirocode 
+      run: |
+        git config --global user.name "iranika"
+        git config --global user.email "7370486+iranika@users.noreply.github.com"
+        git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code.git
+        git fetch
+        git checkout -b refactor/selfhost
+        ./mosq/bin/mosq
+        git add ./4komaData.js
+        git add ./feed.atom
+        git commit -m "update: auto updated 4komaData by yurika" && git push origin refactor/selfhost

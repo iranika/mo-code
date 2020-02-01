@@ -5,6 +5,7 @@ author        = "iranika"
 description   = "A new awesome nimble package"
 license       = "MIT"
 srcDir        = "src"
+binDir        = "bin"
 installExt    = @["nim"]
 bin           = @["mosq"]
 

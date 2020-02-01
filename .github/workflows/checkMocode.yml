@@ -10,13 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: check update momoirocode 
+    - name: initialize git setting.
       run: |
         git config --global user.name "iranika"
         git config --global user.email "7370486+iranika@users.noreply.github.com"
         git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code.git
         git fetch
         git checkout -b refactor/selfhost
+    - name: check update momoirocode 
         ./mosq/bin/mosq
         git add ./4komaData.js
         git add ./feed.atom

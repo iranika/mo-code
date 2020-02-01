@@ -41,5 +41,5 @@ jobs:
         cd mosq
         nimble build -y -d:release
         cd ..
-        ./mosq/bin/mosq | grep -v "No updates" || \
+        ./mosq/bin/mosq | grep -v "No updates" && \
         (git add 4koma/* 4komaData.js feed.atom && git commit -m "update: auto updated 4komaData by yurika" && git push origin refactor/selfhost)

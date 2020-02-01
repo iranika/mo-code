@@ -1,9 +1,11 @@
-name: mo-code ci
+name: Update check
 
 on:
-  push:
-    branches: 
-      - refactor/selfhost
+  schedule:
+    - cron:  '00 0-23/1 * * *'
+  #push:
+  #  branches: 
+  #    - refactor/selfhost
 
 jobs:
   build:

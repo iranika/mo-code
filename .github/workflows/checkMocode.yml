@@ -18,6 +18,7 @@ jobs:
         git fetch
         git checkout -b refactor/selfhost
     - name: check update momoirocode 
+      run: |
         ./mosq/bin/mosq
         git add ./4komaData.js
         git add ./feed.atom

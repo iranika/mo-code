@@ -3,7 +3,7 @@
 
 import mosqpkg/[updateutils,utils4koma]
 
-const mocode_url = "http://momoirocode.web.fc2.com/"
+const mocode_url = "http://momoirocode.web.fc2.com/mocode.html"
 
 when isMainModule:
   if hasUpdated(mocode_url):

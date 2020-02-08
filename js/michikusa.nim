@@ -1,6 +1,8 @@
 include karax / prelude
+import strutils
 
 var lines: seq[kstring] = @[]
+var x = 0
 
 proc modal(): VNode =
   result = buildHtml(tdiv):
@@ -12,13 +14,13 @@ proc rightSidebar(): VNode =
 
 proc view(): VNode =
   result = buildHtml(tdiv):
-    for x in lines:
-      tdiv:
-        text x
+    tdiv:
+      text x.intToStr
     button:
       text "続きを表示"
       proc onclick(ev: Event; n:VNode) =
-        lines.add "Add image"
+        x += 1
+        #lines.add "Add image"
 
 proc tfooter(): VNode =
   result = buildHtml(tdiv):

@@ -35,7 +35,7 @@ const viewer = (()=>{
       element.style.display = "none";
     },
     addTitleToElement : (element=viewer.elem.rightMenu)=>{
-      viewer.pageData.forEach((item, index) => {
+      viewer.pageData.map((item, index) => {
         element.innerHTML += viewer.createMenuItem(index, item)
       })
     },
@@ -67,14 +67,14 @@ const viewer = (()=>{
     showHiddenImage : ()=>{
       const elems = document.querySelectorAll(".hidden-image")
       if (elems.length != 0){
-        [].forEach.call(elems,(elem) => {
+        [].map.call(elems,(elem) => {
           elem.className = elem.className.replace("hidden-image", "")
         });
       }
     },
     addHiddenImage : (pageNum)=>{
       if (pageNum > viewer.page.length){ return }
-      viewer.pageData[pageNum].ImagesUrl.forEach(img_url => {
+      viewer.pageData[pageNum].ImagesUrl.map(img_url => {
         viewer.elem.view.innerHTML += `<img class="hidden-image" src="${img_url}">`
       })
       const tw_text = encodeURI(`第${pageNum +1}話「${viewer.pageData[pageNum].Title}」`)

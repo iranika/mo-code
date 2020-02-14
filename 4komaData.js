@@ -230,5 +230,5 @@ pageData = [
 ,{"Title": "おようふく", "ImagesUrl": ["https://iranika.github.io/mo-code//4koma/229-1.jpg", "https://iranika.github.io/mo-code//4koma/229-2.jpg", "https://iranika.github.io/mo-code//4koma/229-3.jpg", "https://iranika.github.io/mo-code//4koma/229-4.jpg", "https://iranika.github.io/mo-code//4koma/229-5.jpg", "https://iranika.github.io/mo-code//4koma/sp.jpg"]}
 ,{"Title": "おとしだま", "ImagesUrl": ["https://iranika.github.io/mo-code//4koma/230-1.jpg", "https://iranika.github.io/mo-code//4koma/230-2.jpg", "https://iranika.github.io/mo-code//4koma/230-3.jpg", "https://iranika.github.io/mo-code//4koma/230-4.jpg", "https://iranika.github.io/mo-code//4koma/230-5.jpg", "https://iranika.github.io/mo-code//4koma/sp.jpg"]}
 ,{"Title": "節分", "ImagesUrl": ["https://iranika.github.io/mo-code//4koma/231-1.jpg", "https://iranika.github.io/mo-code//4koma/231-2.jpg", "https://iranika.github.io/mo-code//4koma/sp.jpg"]}
-,{"Title": "おに", "ImagesUrl": ["https://iranika.github.io/mo-code//4koma/232-1.jpg", "https://iranika.github.io/mo-code//4koma/232-2.jpg", "https://iranika.github.io/mo-code//4koma/sp.jpg"]}
+,{"Title": "おに", "ImagesUrl": ["https://iranika.github.io/mo-code//4koma/232-1.jpg", "https://iranika.github.io/mo-code//4koma/232-2.jpg", "https://iranika.github.io/mo-code//4koma/232-3.jpg", "https://iranika.github.io/mo-code//4koma/sp.jpg"]}
 ]

@@ -15,6 +15,11 @@ img {
   -webkit-touch-callout: none;
 }
 
+img.icons{
+  width: 40px;
+  -webkit-touch-callout: none;
+}
+
 a {
  color: blue;
  text-decoration: underline;

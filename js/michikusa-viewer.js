@@ -75,10 +75,18 @@ const viewer = (()=>{
     addHiddenImage : (pageNum)=>{
       if (pageNum > viewer.page.length){ return }
       viewer.pageData[pageNum].ImagesUrl.map(img_url => {
-        viewer.elem.view.innerHTML += `<img class="hidden-image" src="${img_url}">`
+        viewer.elem.view.innerHTML += `
+        <div class="relative">
+          <img class="overlay en" src="${img_url.replace('ja','en').replace('jpg','gif')}">
+          <img class="hidden-image" src="${img_url}">
+        </div>
+        `
       })
       const tw_text = encodeURI(`第${pageNum +1}話「${viewer.pageData[pageNum].Title}」`)
       viewer.elem.view.innerHTML += `<a class="tweetbtn hidden-image" href="https://twitter.com/intent/tweet?hashtags=%E9%81%93%E8%8D%89%E5%B1%8B&original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonText%3D%25E3%2581%2593%25E3%2581%2593%25E3%2581%2599%25E3%2581%258D%25EF%25BC%2581%25EF%25BC%2581%2523%25E3%2581%25BF%25E3%2581%25A1%25E3%2581%258F%25E3%2581%2595%25E3%2581%25B3%25E3%2582%2585%25E3%2581%2582%25E3%2583%25BC%26buttonType%3DTweetButton%26buttonUrl%3Dhttps%253A%252F%252Firanika.github.io%252Fmo-code%252F%252310%26dnt%3D1%26lang%3Dja%26widget%3DButton&ref_src=twsrc%5Etfw&text=${tw_text}&tw_p=tweetbutton&url=https%3A%2F%2Firanika.github.io%2Fmo-code%2F%23${pageNum +1}"><span class="label">ツイートする</span></a>`
+    },
+    switchLang: (language)=>{
+      document.body.lang = language
     }
   }
 })();

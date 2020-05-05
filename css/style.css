@@ -15,6 +15,31 @@ img {
   -webkit-touch-callout: none;
 }
 
+img.relative{
+  position: relative;
+  padding: 0;
+}
+
+img.overlay{
+  position: absolute;
+  padding: 0;
+  right: 0;
+  z-index: 10;
+}
+
+body[lang="ja"] #view .relative .overlay {
+  display: none;
+}
+
+body[lang="en"] #view .relative .overlay.en {
+  display: block;
+}
+
+body[lang="cn_tw"] #view .relative .overlay.cn_tw {
+  display: block;
+}
+
+
 img.icons{
   width: 40px;
   -webkit-touch-callout: none;

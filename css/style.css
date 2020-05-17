@@ -24,7 +24,7 @@ img.overlay{
   position: absolute;
   padding: 0;
   right: 0;
-  z-index: 10;
+  z-index: 2;
 }
 
 body[lang="ja"] #view .relative .overlay {
@@ -54,11 +54,11 @@ a {
   position: fixed;
   right: 0px;
   top: 0px;
-  z-index: 10;
+  z-index: 50;
 }
 
 .w3-sidebar{
-  z-index: 20;
+  z-index: 60;
 }
 
 .hidden-image{

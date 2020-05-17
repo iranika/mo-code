@@ -87,12 +87,13 @@ const viewer = (()=>{
     },
     switchLang: (language)=>{
       document.body.lang = language
+      document.querySelector("#language").value = language
     }
   }
 })();
 
 window.onload = ()=>{
-  hash = location.hash.replace("#", "").replace("latest", pageData.length)
+  let hash = location.hash.replace("#", "").replace("latest", pageData.length)
 
   if (isNaN(hash) || hash == ""){
     document.getElementById("modal").style.display = "block"　//モーダルの表示
@@ -110,4 +111,8 @@ window.onload = ()=>{
       viewer.showMore()  
     }
   })
+  //言語設定のイベントリスナー
+  document.querySelector("#language").addEventListener('change', event => {
+    viewer.switchLang(event.target.value)
+  });
 }

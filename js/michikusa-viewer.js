@@ -114,5 +114,6 @@ window.onload = ()=>{
   //言語設定のイベントリスナー
   document.querySelector("#language").addEventListener('change', event => {
     viewer.switchLang(event.target.value)
+    viewer.closeRightMenu()
   });
 }

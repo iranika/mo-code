@@ -15,6 +15,31 @@ img {
   -webkit-touch-callout: none;
 }
 
+img.relative{
+  position: relative;
+  padding: 0;
+}
+
+img.overlay{
+  position: absolute;
+  padding: 0;
+  right: 0;
+  z-index: 2;
+}
+
+body[lang="ja"] #view .relative .overlay {
+  display: none;
+}
+
+body[lang="en"] #view .relative .overlay.en {
+  display: block;
+}
+
+body[lang="cn_tw"] #view .relative .overlay.cn_tw {
+  display: block;
+}
+
+
 img.icons{
   width: 40px;
   -webkit-touch-callout: none;
@@ -29,11 +54,11 @@ a {
   position: fixed;
   right: 0px;
   top: 0px;
-  z-index: 10;
+  z-index: 50;
 }
 
 .w3-sidebar{
-  z-index: 20;
+  z-index: 60;
 }
 
 .hidden-image{
@@ -93,4 +118,48 @@ a {
 .tweetbtn .label {
   margin-left: 3px;
   white-space: nowrap;
+}
+
+/* language select */
+
+.language_select {
+	overflow: hidden;
+	text-align: center;
+}
+.language_select select {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: center;
+	outline: none;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.language_select select::-ms-expand {
+    display: none;
+}
+.language_select.sl_box {
+	position: relative;
+	border: 1px solid #bbbbbb;
+	border-radius: 2px;
+	background: #ffffff;
+}
+.language_select.sl_box::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+.language_select.sl_box select {
+	padding: 8px 38px 8px 8px;
+  font-family: Arial, Helvetica, sans-serif;
 }

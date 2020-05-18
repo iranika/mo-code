@@ -17,7 +17,7 @@
   <title>みちくさびゅあー</title>
 </head>
 
-<body id="body">
+<body id="body" lang="ja">
   <div class="modal" id="modal" style="display: none">
     <div class="modal-body">
       <div class="modal-window">
@@ -63,6 +63,13 @@
     </div>
   </div>
   <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+    <div class="language_select sl_box">
+      <select id="language">
+        <option value="ja">日本語</option>
+        <option value="en">English:WIP</option>
+        <option value="zh-tw">中文繁体字:WIP</option>
+      </select>  
+    </div>
     <button onclick="viewer.closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
   </div>
   <button class="w3-button w3-teal w3-xxxlarge w3-right dock-button" onclick="viewer.openRightMenu()">&#9776;</button>

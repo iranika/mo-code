@@ -27,15 +27,16 @@ img.overlay{
   z-index: 2;
 }
 
-body[lang="ja"] #view .relative .overlay {
+body[lang="ja"] #view .relative .overlay,
+body[lang="en"] #view .relative .overlay,
+body[lang="zh-cmn-Hant-TW"] #view .relative .overlay {
   display: none;
 }
 
 body[lang="en"] #view .relative .overlay.en {
   display: block;
 }
-
-body[lang="cn_tw"] #view .relative .overlay.cn_tw {
+body[lang="zh-cmn-Hant-TW"] #view .relative .overlay.zh-cmn-Hant-TW {
   display: block;
 }
 

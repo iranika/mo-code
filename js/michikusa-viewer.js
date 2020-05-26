@@ -78,6 +78,7 @@ const viewer = (()=>{
         viewer.elem.view.innerHTML += `
         <div class="relative">
           <img class="overlay en" src="${img_url.replace('ja','en').replace('jpg','gif')}">
+          <img class="overlay zh-cmn-Hant-TW" src="${img_url.replace('ja','zh-tw').replace('jpg','gif')}">
           <img class="hidden-image" src="${img_url}">
         </div>
         `

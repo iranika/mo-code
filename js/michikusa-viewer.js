@@ -94,6 +94,8 @@ const viewer = (()=>{
 })();
 
 window.onload = ()=>{
+  //window.open("https://movue.iranika.info/#/About", "_blank")
+  location.href = "https://movue.iranika.info/#/About" //絶対に強い意志で新ビュアーに飛ばす
   let hash = location.hash.replace("#", "").replace("latest", pageData.length)
 
   if (isNaN(hash) || hash == ""){

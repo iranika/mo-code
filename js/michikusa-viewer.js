@@ -95,13 +95,13 @@ const viewer = (()=>{
 
 window.onload = ()=>{
   //window.open("https://movue.iranika.info/#/About", "_blank")
-  location.href = "https://movue.iranika.info/#/About" //絶対に強い意志で新ビュアーに飛ばす
   let hash = location.hash.replace("#", "").replace("latest", pageData.length)
 
   if (isNaN(hash) || hash == ""){
     document.getElementById("modal").style.display = "block"　//モーダルの表示
     viewer.initShowImage(viewer.page.current)
   }else{
+    document.getElementById("modal").style.display = "block"　//モーダルの表示
     viewer.initShowImage(parseInt(hash) -1) //話数と合わせるために-1する
   }
   viewer.addTitleToElement(viewer.elem.rightMenu)

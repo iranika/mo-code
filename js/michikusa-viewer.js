@@ -94,7 +94,7 @@ const viewer = (()=>{
 })();
 
 window.onload = ()=>{
-  //window.open("https://movue.iranika.info/#/About", "_blank")
+  window.open("https://movue.iranika.info/#/About", "_blank") //新アプリに強制リダイレクト
   let hash = location.hash.replace("#", "").replace("latest", pageData.length)
 
   if (isNaN(hash) || hash == ""){

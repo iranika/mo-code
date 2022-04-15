@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@happy_packet" />
+  <meta property="og:url" content="https://iranika.github.io/mo-code/viewer.html" />
+  <meta property="og:title" content="みちくさびゅあー" />
+  <meta property="og:description" content="桃鳥様公認の道草屋漫画ビューアーです。" />
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="./img/favicon.png" sizes="48x48">
+  <link rel="stylesheet" href="./css/w3.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/modal.css">
+  <script src="https://mo4koma.iranika.info/4komaData.js?null=(new Data()).getTime()"></script>
+  <title>みちくさびゅあー</title>
+</head>
+
+<body id="body" lang="ja">
+  <div class="modal" id="modal" style="display: none">
+    <div class="modal-body">
+      <div class="modal-window">
+        <label class="modal-label" style="right:-16" onclick="document.getElementById('modal').style.display='none'">
+          <svg width="16" height="16">
+            <polygon
+              points="14.4,3.1 12.9,1.6 8,6.6 3.1,1.6 1.6,3.1 6.6,8 1.6,12.9 3.1,14.4 8,9.4 12.9,14.4 14.4,12.9 9.4,8 ">
+            </polygon>
+          </svg>
+        </label>
+        <div class="modal-inner">
+          <div class="modal-content">
+            <h2>みちくさびゅあー</h2>
+            <h5>道草屋 ばっくやーど数コマ漫画(スマホ向け)</h5>
+            <div class="site-description">
+              【重要なおしらせ】<br />
+              新アプリをリリースしました。<br />
+              <h3 style="color: red;">できる限り新びゅあーを使ってください。</h3>
+              <div class="site-infomation">
+                <label onclick="document.getElementById('modal').style.display='none'">
+                  <a class="site-infomation-textlink" href="https://movue.iranika.info">新びゅあーに行く</a>
+                </label>
+              </div>
+              <br />
+              <div>
+              
+              <br/>
+              新アプリは話数検索など便利な機能がたくさんあります。<br />
+              今後は新アプリの開発がメインになります。<br />
+              このサイトは非常用として残しますが、今後メンテナンスされません。<br/>
+              今後ともみちくさびゅあーをよろしくお願いします。</br>
+              <br />
+              いらにか。<br />
+              <br />
+              </div>
+            </div>
+              <label onclick="document.getElementById('modal').style.display='none'">
+                <a class="site-infomation-textlink">最初から読む</a>
+                <a class="site-infomation-textlink" onclick="viewer.lastShowImage()">新作から読む</a>
+              </label>
+            </div>
+            <div class="site-caption">
+              注意<br/>
+              画像(漫画)は<a href="http://momoirocode.web.fc2.com/">桃色CODE様</a>の著作物です。<br/>
+              画像の著作権は桃色CODE様にあり、iranikaにはありません。<br/>
+              桃色CODE様から許諾を頂いて画像及びビュアーを提供しています。<br/>
+              ビュアーの不具合のお問い合わせは<a href="https://twitter.com/happy_packet">いらにか(twitter)</a>までお願いします。<br/>
+              桃色CODE様には問い合わせないでください。<br/>
+              Twitter:<a href="https://twitter.com/happy_packet">@happy_packet</a><br/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+    <div class="language_select sl_box">
+      <select id="language">
+        <option value="ja">日本語</option>
+        <option value="en">English:WIP</option>
+        <option value="zh-cmn-Hant-TW">中文繁体字:WIP</option>
+      </select>  
+    </div>
+    <button onclick="viewer.closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  </div>
+  <button class="w3-button w3-teal w3-xxxlarge w3-right dock-button" onclick="viewer.openRightMenu()">&#9776;</button>
+  <div id="view"></div>
+  <div id="footer">
+    <a id="more" onclick="viewer.showMore()"><button type="button">続きを表示</button></a>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+  </div>
+  <div class="about">
+    <div class="footer-promotion">
+      <span style="color:rgb(255, 59, 92);font-weight: bold;">WE♡道草屋</span>
+      <br/>
+      道草屋についてもっと知りたくなった人は、<br/>
+      サークルサイト「<a href="http://momoirocode.web.fc2.com/">桃色CODE</a>」をチェック♪<br/>
+      もしくは<a href="https://www.dlsite.com/home/circle/profile/=/maker_id/RG24350.html">DLSite</a>/<a
+        href="https://momotori.booth.pm/">Booth</a>のサークルページへGo!!<br/>
+      (DLSiteとBoothはR指定があるので未成年の方は注意)<br/>
+      <div>
+        <div class="footer-note">
+          みちくさびゅあーは道草屋の著作者である桃鳥様から<br/>
+          許諾を得てiranikaがを提供・公開しています。<br/>
+          <br/>
+          <b>ご支援について</b><br/>
+          みちくさびゅあー及びiranikaはご支援を受け付けています。<br/>
+          Kyash、楽天ペイ、Amazonギフト券、PayPay等。<br/>
+          ご支援の気持ちがなによりも嬉しいので数円でも小躍りしちゃいます。<br/>
+          詳細は<a href="https://iranika.github.io/" target="_blank">こちら</a>(iranikaの個人サイトに移動します)<br/>
+          <br/>
+          <div>
+            <a class="footer-note-links" href="https://github.com/iranika/mo-code">Github</a>
+            <a class="footer-note-links" href="https://twitter.com/happy_packet">Twitter</a>
+          </div>
+          みちくさびゅーあー ©2019 iranika(@happy_packet)
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/michikusa-viewer.js"></script>
+
+</body>
+</html>

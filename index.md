@@ -3,7 +3,7 @@
 みちくさびゅあーは新しくなりました。  
 今後はなるべく新しいびゅあーを使ってください。  
 
-[新しいみちくさびゅあーに行く]([https://movue.iranika.info](https://momoco.iranika.info/#/))
+[新しいみちくさびゅあーに行く](https://movue.iranika.info)
 
 
 # 初代みちくさびゅあーを使いたい人へ
